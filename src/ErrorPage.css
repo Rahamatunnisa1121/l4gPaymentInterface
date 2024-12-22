@@ -1,0 +1,26 @@
+/* ErrorPage.css */
+.error-page {
+    margin-top:10%;
+    text-align: center;
+    padding: 20px;
+    h2{
+        color:red;
+        font-weight: bold;
+    }
+}
+
+.retry-button {
+    width:50%;
+    height:32px;
+    margin-top:5px;
+    padding:3px 7px;
+    background: #e39402;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.retry-button:hover {
+    background-color: #006F4F;
+    color:whitesmoke;
+}

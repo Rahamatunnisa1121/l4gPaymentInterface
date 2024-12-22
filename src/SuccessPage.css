@@ -1,0 +1,23 @@
+/* SuccessPage.css */
+.success-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin-top: 50px;
+    color: #155724;
+    text-align: center;
+    padding: 20px;
+    width:60%;
+    line-height: 1.5rem;
+}
+
+.success-page-container h1 {
+    font-size: 2rem;
+}
+
+.success-page-container p {
+    font-size: 1.5rem;
+    color:#e39402;
+}
