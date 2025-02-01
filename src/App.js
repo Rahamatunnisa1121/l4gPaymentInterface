@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
-import SuccessPage from "./SuccessPage";
-import ErrorPage from "./ErrorPage"; // Import the error page component
+import SuccessPage from "./SuccessPage.js";
+import ErrorPage from "./ErrorPage.js"; // Import the error page component
 import logo from "./assets/hd-logo.png";
-
+//import dotenv from 'dotenv';
 function App() {
+    //dotenv.config();
     const [formData, setFormData] = useState({ name: "", email: "", contact: "" });
     const [isSuccess, setIsSuccess] = useState(false);
     const [showSuccessPage, setShowSuccessPage] = useState(false);
@@ -37,8 +38,9 @@ function App() {
 
     const checkEmailRegistration = async (email) => {
         try {
+            //const apiUrl = `${process.env.API_URL}?email=${email}`;
             // Make the GET request to the proxy path
-            const response = await axios.get(`https://i25si1o7qi.execute-api.ap-south-1.amazonaws.com/v1/studentEmailCheck?email=${email}`, {
+            const response = await axios.get(`https://example.com?email=${email}`, {
             });
 
             // Check the response to determine if the email is registered
@@ -85,7 +87,7 @@ function App() {
         }
 
         try {
-            const response = await axios.post("/api/V1/razorpay-payment-link-creation", formData);
+            const response = await axios.post("/api/example.com", formData);
 
             console.log("Full API Response:", response);
 
